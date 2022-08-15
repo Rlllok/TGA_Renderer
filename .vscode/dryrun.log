@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/rlllok/Documents/Projects/TGA_Image_format'
+make: Nothing to be done for 'all'.
+make: Leaving directory '/home/rlllok/Documents/Projects/TGA_Image_format'
+ 

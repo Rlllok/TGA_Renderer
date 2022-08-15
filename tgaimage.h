@@ -25,15 +25,16 @@ struct Header {
 
 
 class Pixel {
+private:
+    int bpp;
+    unsigned char bytes[4];
 public:
-    const int bpp;
-    unsigned char* bytes;
-
     Pixel();
     Pixel(unsigned char v); // bpp = 1
     Pixel(unsigned char r, unsigned char g, unsigned char b); // bpp = 3
     Pixel(unsigned char r, unsigned char g, unsigned char b, unsigned char a); // bpp = 4
-    ~Pixel();
+    int get_bpp();
+    unsigned char* get_bytes();
 };
 
 
@@ -59,8 +60,11 @@ public:
     Image();
     Image(unsigned int width, unsigned int height, unsigned int bpp);
     ~Image();
+    Image& operator=(const Image& img);
     bool write_file(const char* filename);
-    int set(int x, int y, Pixel p);
+    bool read_file(const char* filename);
+    bool setPixel(int x, int y, Pixel p);
+    void drawLine(int x0, int y0, int x1, int y1, Pixel pixel);
 
     void random_data(); // for testing
 };
