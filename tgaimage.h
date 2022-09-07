@@ -1,7 +1,7 @@
 #pragma once
 
 #include <fstream>
-
+#include "vectors.h"
 
 using namespace std;
 
@@ -25,25 +25,27 @@ struct Header {
 
 
 class Pixel {
-private:
+public:
     int bpp;
     unsigned char bytes[4];
-public:
+
     Pixel();
     Pixel(unsigned char v); // bpp = 1
     Pixel(unsigned char r, unsigned char g, unsigned char b); // bpp = 3
     Pixel(unsigned char r, unsigned char g, unsigned char b, unsigned char a); // bpp = 4
+    Pixel(const unsigned char *p, unsigned char bpp);
     int get_bpp();
     unsigned char* get_bytes();
 };
 
 
 class Image {
-protected:
+private:
     unsigned char* data;
     unsigned int width;
     unsigned int height;
     unsigned int bpp;
+    float* zbuffer;
 
 public:
     enum Image_types {
@@ -61,10 +63,20 @@ public:
     Image(unsigned int width, unsigned int height, unsigned int bpp);
     ~Image();
     Image& operator=(const Image& img);
-    bool write_file(const char* filename);
-    bool read_file(const char* filename);
+    bool write_tga_file(const char* filename, bool rle = true);
+    bool read_tga_file(const char* filename);
+    bool load_rle_data(std::ifstream &in);
+    bool unload_rle_data(std::ofstream &out);
+    bool flipVertically();
+    bool flipHorizontally();
     bool setPixel(int x, int y, Pixel p);
+    Pixel get(int x, int y);
     void drawLine(int x0, int y0, int x1, int y1, Pixel pixel);
-
-    void random_data(); // for testing
+    void drawTriangle(Vector2Int v1, Vector2Int v2, Vector2Int v3, Pixel pixel);
+    void drawTrigon(Vector3Float v1, Vector3Float v2, Vector3Float v3, Pixel pixel);
+    void resetZbuffer();
+    Vector3Float getBarycentricCoordinates(Vector2Int point, Vector2Int triangle[3]);
+    Vector3Float getBarycentricCoordinates(Vector3Float point, Vector3Float triangle[3]);
+    Vector2Int getTriangleBounderyMinPoint(Vector2Int triangle[3]);
+    Vector2Int getTriangleBounderyMaxPoint(Vector2Int triangle[3]);
 };

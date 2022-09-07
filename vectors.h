@@ -55,6 +55,9 @@ public:
 	Vector3<t> & normalize(t l=1) {
         *this = (*this)*(l/norm()); return *this;
     }
+    Vector3 crossProduct(Vector3<t> v2) {
+        return Vector3<t>(y*v2.z - z*v2.y, z*v2.x - x*v2.z, x*v2.y - y*v2.x); 
+    }
 };
 
 typedef Vector2<int> Vector2Int;

@@ -6,11 +6,10 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug 15 16:46:11 2022
+# Make data base, printed on Mon Sep  5 10:49:22 2022
 
 # Variables
 
- 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
@@ -22,6 +21,7 @@ DESKTOP_SESSION = cinnamon
 # environment
 XDG_SESSION_CLASS = user
 # environment
+ 
 XDG_SESSION_TYPE = x11
 # makefile (from 'Makefile', line 7)
 TARGET = main
@@ -40,7 +40,7 @@ GDMSESSION = cinnamon
 # default
 MAKE_VERSION := 4.2.1
 # makefile
-CURDIR := /home/rlllok/Documents/Projects/TGA_Image_format
+CURDIR := /home/rlllok/Documents/Projects/Renderer
 # makefile
 SHELL = /bin/sh
 # environment
@@ -72,17 +72,17 @@ LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 LC_NAME = uk_UA.UTF-8
 # environment
-VSCODE_CWD = /home/rlllok/Documents/Projects/TGA_Image_format
+VSCODE_CWD = /home/rlllok/Documents/Projects/Renderer
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH = /home/rlllok/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/rlllok-IdeaPad-L340-15IRH-Gaming:@/tmp/.ICE-unix/1377,unix/rlllok-IdeaPad-L340-15IRH-Gaming:/tmp/.ICE-unix/1377
+SESSION_MANAGER = local/rlllok-IdeaPad-L340-15IRH-Gaming:@/tmp/.ICE-unix/1417,unix/rlllok-IdeaPad-L340-15IRH-Gaming:/tmp/.ICE-unix/1417
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -96,8 +96,6 @@ XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/rlllok
 # environment
 LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 # environment
-INSIDE_NEMO_PYTHON = 
-# environment
 XDG_SESSION_DESKTOP = cinnamon
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
@@ -106,7 +104,7 @@ SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
 DISPLAY = :0
 # environment
-PWD = /home/rlllok/Documents/Projects/TGA_Image_format
+PWD = /home/rlllok/Documents/Projects/Renderer
 # environment
 QT_QPA_PLATFORMTHEME = qt5ct
 # default
@@ -114,7 +112,7 @@ QT_QPA_PLATFORMTHEME = qt5ct
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 1466
+SSH_AGENT_PID = 1503
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = X-Cinnamon
 # environment
@@ -173,6 +171,8 @@ DESTDIR = ./
 LC_TELEPHONE = uk_UA.UTF-8
 # default
 MAKE_COMMAND := make
+# environment
+OLDPWD = /home/rlllok
 # default
 .VARIABLES := 
 # automatic
@@ -196,11 +196,9 @@ GDK_BACKEND = x11
 # environment
 LC_PAPER = uk_UA.UTF-8
 # environment
-CINNAMON_VERSION = 5.2.7
-# environment
-LC_IDENTIFICATION = uk_UA.UTF-8
-# environment
 QT_ACCESSIBILITY = 1
+# environment
+DESKTOP_AUTOSTART_ID = 10d293d35f12c631166235935785386000000014170018
 # environment
 DEFAULTS_PATH = /usr/share/gconf/cinnamon.default.path
 # makefile (from 'Makefile', line 1)
@@ -215,16 +213,14 @@ LC_NUMERIC = uk_UA.UTF-8
 LC_MEASUREMENT = uk_UA.UTF-8
 # environment
 LC_ALL = C
-# environment
-GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # makefile (from 'Makefile', line 4)
 LIBS = -lm
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/1acbe45d_1529_4cee_ad90_705d7a936a1c
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/d3ae524a_687d_4192_b0c7_0f22dca736ad
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.217
+GNOME_TERMINAL_SERVICE = :1.182
 # default
 SUFFIXES := 
 # environment
@@ -232,7 +228,7 @@ CHROME_DESKTOP = code-url-handler.desktop
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
-GJS_DEBUG_OUTPUT = stderr
+LC_IDENTIFICATION = uk_UA.UTF-8
 # default
 .RECIPEPREFIX := 
 # makefile (from 'Makefile', line 9)
@@ -244,9 +240,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 9350
+VSCODE_PID = 5699
 # variable set hash-table stats:
-# Load=117/1024=11%, Rehash=0, Collisions=12/148=8%
+# Load=115/1024=11%, Rehash=0, Collisions=11/152=7%
 
 # Pattern-specific Variable Values
 
@@ -254,10 +250,9 @@ VSCODE_PID = 9350
 
 # Directories
 
- 
-# . (device 2056, inode 1966110): 21 files, no impossibilities.
+# . (device 2056, inode 1966110): 22 files, no impossibilities.
 
-# 21 files, no impossibilities in 1 directories.
+# 22 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -270,7 +265,10 @@ all: main
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+ 
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
 
 # Not a target:
 Makefile:
@@ -282,21 +280,21 @@ Makefile:
 # Not a target:
 main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-15 16:44:11.067540681
+#  Last modified 2022-08-17 12:35:32.14396699
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 tgaimage.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-15 12:22:16.523009966
+#  Last modified 2022-08-17 11:51:00.885251274
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 model.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-15 16:44:12.627540733
+#  Last modified 2022-08-15 18:00:47.351695908
 #  File has been updated.
 #  Successfully updated.
 
@@ -317,25 +315,45 @@ clean:
 
 main: tgaimage.o model.o main.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-08-15 16:45:56.591544245
+#  Last modified 2022-08-17 11:55:10.332442124
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
 #  recipe to execute (from 'Makefile', line 14):
 	$(SYSCONF_LINK) -Wall $(LDFLAGS) -o $(DESTDIR)$(TARGET) $(OBJECTS) $(LIBS)
 
 main.o: main.cpp
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2022-08-15 16:45:56.503544242
+#  Last modified 2022-08-17 11:55:10.248439859
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := main.o
+# automatic
+# % := 
+# automatic
+# * := main
+# automatic
+# + := main.cpp
+# automatic
+# | := 
+# automatic
+# < := main.cpp
+# automatic
+# ^ := main.cpp
+# automatic
+# ? := main.cpp
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/16=12%
 #  recipe to execute (from 'Makefile', line 17):
 	$(SYSCONF_LINK) -Wall $(CPPFLAGS) -c $(CFLAGS) $< -o $@
 
 tgaimage.o: tgaimage.cpp
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'tgaimage'
-#  Last modified 2022-08-15 16:45:55.439544206
+#  Last modified 2022-08-17 11:54:43.451712699
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 17):
@@ -344,7 +362,7 @@ tgaimage.o: tgaimage.cpp
 model.o: model.cpp
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: 'model'
-#  Last modified 2022-08-15 16:45:56.043544226
+#  Last modified 2022-08-17 10:39:39.497525203
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 17):
@@ -358,12 +376,12 @@ model.o: model.cpp
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 31 / storage = 266 B / avg = 8 B
-# current buf: size = 8162 B / used = 266 B / count = 31 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 32 / storage = 276 B / avg = 8 B
+# current buf: size = 8162 B / used = 276 B / count = 32 / avg = 8 B
 
-# strcache performance: lookups = 54 / hit rate = 42%
+# strcache performance: lookups = 55 / hit rate = 41%
 # hash-table stats:
-# Load=31/8192=0%, Rehash=0, Collisions=1/54=2%
-# Finished Make data base on Mon Aug 15 16:46:11 2022
+# Load=32/8192=0%, Rehash=0, Collisions=1/55=2%
+# Finished Make data base on Mon Sep  5 10:49:22 2022
 
  

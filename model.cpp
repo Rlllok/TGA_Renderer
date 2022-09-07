@@ -20,6 +20,8 @@ Model::Model(const char *filename) : vertices(), faces() {
             Vector3Float v;
             for (int i = 0; i < 3; i++) iss >> v.raw[i];
             vertices.push_back(v);
+        } else if (!line.compare(0, 3, "vt ")) {
+            // Texture
         } else if (!line.compare(0, 2, "f ")) {
             std::vector<int> f;
             int itmp, idx;

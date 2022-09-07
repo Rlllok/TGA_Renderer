@@ -1,5 +1,9 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory '/home/rlllok/Documents/Projects/TGA_Image_format'
-make: Nothing to be done for 'all'.
-make: Leaving directory '/home/rlllok/Documents/Projects/TGA_Image_format'
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/rlllok/Documents/Projects/Renderer'
+g++ -Wall  -c  tgaimage.cpp -o tgaimage.o
+ 
+g++ -Wall  -c  model.cpp -o model.o
+g++ -Wall  -c  main.cpp -o main.o
+g++ -Wall  -o ./main tgaimage.o model.o main.o -lm
+make: Leaving directory '/home/rlllok/Documents/Projects/Renderer'
  
