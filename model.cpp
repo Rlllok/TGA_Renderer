@@ -19,21 +19,32 @@ Model::Model(const char *filename) : vertices(), faces() {
             iss >> tmp;
             Vector3Float v;
             for (int i = 0; i < 3; i++) iss >> v.raw[i];
+            // std::cout << v.raw[1] << " ";
             vertices.push_back(v);
         } else if (!line.compare(0, 3, "vt ")) {
-            // Texture
+            iss >> tmp >> tmp;
+            Vector2Float t;
+            for (int i = 0; i < 2; i++) iss >> t.raw[i];
+            texture_vertices.push_back(t);
         } else if (!line.compare(0, 2, "f ")) {
             std::vector<int> f;
-            int itmp, idx;
+            std::vector<int> t;
+            int tid, idx, itmp;
             iss >> tmp;
-            while (iss >> idx >> tmp >> itmp >> tmp >> itmp) {
+            while (iss >> idx >> tmp >> tid >> tmp >> itmp) {
                 idx--;
                 f.push_back(idx);
+                tid--;
+                t.push_back(tid);
             }
             faces.push_back(f);
+            faces_texture.push_back(t);
         }
     }
-    std::cout << vertices.size() << " " << faces.size() << std::endl;
+    std::cout << "Vertecise: " << vertices.size() << std::endl;
+    std::cout << "Polygons: " << faces.size() << std::endl;
+    std::cout << "Texture V: " << texture_vertices.size() << std::endl;
+    std::cout << "Texture F: " << faces_texture.size() << std::endl;
 }
 
 Model::~Model() {
@@ -53,4 +64,14 @@ std::vector<int> Model::face(int idx) {
 
 Vector3Float Model::vertex(int i) {
     return vertices[i];
+}
+
+Vector2Float Model::textureVertex(int i)
+{
+    return texture_vertices[i];
+}
+
+std::vector<int> Model::faceTexture(int i)
+{
+    return faces_texture[i];
 }

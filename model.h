@@ -7,7 +7,8 @@ class Model {
 private:
     std::vector<Vector3Float> vertices;
     std::vector<std::vector<int>> faces;
-    std::vector<Vector3Float> textures;
+    std::vector<Vector2Float> texture_vertices;
+    std::vector<std::vector<int>> faces_texture;
 
 public:
     Model(const char *filename);
@@ -16,5 +17,6 @@ public:
     int getFacesNum();
     Vector3Float vertex(int i);
     std::vector<int> face(int i);
-    Vector3Float texture(int i);
+    Vector2Float textureVertex(int i);
+    std::vector<int> faceTexture(int i);
 };

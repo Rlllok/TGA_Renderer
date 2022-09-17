@@ -9,6 +9,7 @@
 #include "tgaimage.h"
 #include "model.h"
 #include "vectors.h"
+#include "renderer.h"
 
 
 using namespace std;
@@ -121,41 +122,62 @@ int main() {
     // image.flipVertically();
     // image.write_file("Outputs/zbuffer.tga");
 
+    Image* image = new Image(width, height, Image::RGB_BPP);
+    Image* texture = new Image();
+    texture->read_tga_file("head_texture.tga");
+    texture->flipVertically();
+    // texture->flipHorizontally();
+    std::cout << "Texture bpp: " << texture->get_bpp() << std::endl;
+    std::cout << "Texture width: " << texture->get_width() << std::endl;
+    std::cout << "Texture height: " << texture->get_height() << std::endl;
+    Renderer renderer(model, image, texture);
+    renderer.render();
+    renderer.writeFile("test.tga");
+
 // TEXTURE
-    Image image(width, height, Image::RGB_BPP);
-    Pixel white(255,255,255);
+    // Image image(width, height, Image::RGB_BPP);
+    // Pixel white(255,255,255);
 
-    Image texture;
-    texture.read_tga_file("head_texture.tga");
+    // Image texture_img;
+    // texture_img.read_tga_file("head_texture.tga");
 
-    Vector3Float lightDirection(0, 0, -1);
+    // Vector3Float lightDirection(0, 0, -1);
 
-    for (int i=0; i<model->getFacesNum(); i++) {
-        std::vector<int> face = model->face(i);
-        Vector2Int screenCoords[3];
-        Vector3Float worldCoords[3];
-        for (int j=0; j<3; j++) {
-            Vector3Float v = model->vertex(face[j]);
-            screenCoords[j] = Vector2Int((v.x+1)*(width-1)/2., (v.y+1)*(height-1)/2);
-            worldCoords[j] = v;
-        }
+    // for (int i=0; i<model->getFacesNum(); i++) {
+    //     std::vector<int> face = model->face(i);
+    //     std::vector<int> face_texture = model->faceTexture(i);
+    //     Vector2Int screenCoords[3];
+    //     Vector3Float worldCoords[3];
+    //     Vector3Float textureCoords[3];
+    //     for (int j=0; j<3; j++) {
+    //         Vector3Float v = model->vertex(face[j]);
+    //         Vector3Float t = model->textureVertex(face_texture[j]);
+    //         worldCoords[j] = v;
+    //         screenCoords[j] = Vector2Int((v.x+1)*(width-1)/2., (v.y+1)*(height-1)/2);
+    //         textureCoords[j] = t;
+    //         // textureCoords[j] = Vector2Float(
+    //         //     t.x * (texture_img.get_width()-1) / 2.,
+    //         //     t.y * (texture_img.get_height()-1) / 2.
+    //         // );
+    //     }
 
-        Vector3Float n = (worldCoords[2] - worldCoords[0])^(worldCoords[1] - worldCoords[0]);
-        n.normalize();
-        float lightIntensity = n * lightDirection;
+    //     Vector3Float n = (worldCoords[2] - worldCoords[0])^(worldCoords[1] - worldCoords[0]);
+    //     n.normalize();
+    //     float lightIntensity = n * lightDirection;
 
-        if (lightIntensity > 0) {
-            image.drawTrigon(
-                worldCoords[0],
-                worldCoords[1],
-                worldCoords[2],
-                Pixel(lightIntensity * 255, lightIntensity * 255, lightIntensity * 255)
-            );
-        }
-    }
+    //     if (lightIntensity > 0) {
+            
+    //         image.drawTrigon(
+    //             worldCoords[0],
+    //             worldCoords[1],
+    //             worldCoords[2],
+    //             Pixel(lightIntensity * 255, lightIntensity * 255, lightIntensity * 255)
+    //         );
+    //     }
+    // }
 
-    image.flipVertically();
-    image.write_tga_file("Outputs/withTexture.tga");
+    // image.flipVertically();
+    // image.write_tga_file("Outputs/withTexture.tga");
 
     return 0;
 }

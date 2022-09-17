@@ -36,6 +36,7 @@ public:
     Pixel(const unsigned char *p, unsigned char bpp);
     int get_bpp();
     unsigned char* get_bytes();
+    Pixel operator *(float num);
 };
 
 
@@ -63,6 +64,9 @@ public:
     Image(unsigned int width, unsigned int height, unsigned int bpp);
     ~Image();
     Image& operator=(const Image& img);
+    unsigned int get_width();
+    unsigned int get_height();
+    unsigned int get_bpp();
     bool write_tga_file(const char* filename, bool rle = true);
     bool read_tga_file(const char* filename);
     bool load_rle_data(std::ifstream &in);
@@ -70,13 +74,5 @@ public:
     bool flipVertically();
     bool flipHorizontally();
     bool setPixel(int x, int y, Pixel p);
-    Pixel get(int x, int y);
-    void drawLine(int x0, int y0, int x1, int y1, Pixel pixel);
-    void drawTriangle(Vector2Int v1, Vector2Int v2, Vector2Int v3, Pixel pixel);
-    void drawTrigon(Vector3Float v1, Vector3Float v2, Vector3Float v3, Pixel pixel);
-    void resetZbuffer();
-    Vector3Float getBarycentricCoordinates(Vector2Int point, Vector2Int triangle[3]);
-    Vector3Float getBarycentricCoordinates(Vector3Float point, Vector3Float triangle[3]);
-    Vector2Int getTriangleBounderyMinPoint(Vector2Int triangle[3]);
-    Vector2Int getTriangleBounderyMaxPoint(Vector2Int triangle[3]);
+    Pixel getPixel(int x, int y);
 };
